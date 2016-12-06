@@ -1,0 +1,12 @@
+User: {userId pk, userFirstName, userLastName, userImage, userEmail, userPassword, isTutor, userStatus}
+Student: {studentId pk, userId, countdownId}
+Tutor: {tutorId pk, userId}
+Message: {messageId pk, title, body, date, time, receiverId, studentId, tutorId}
+Course: {courseId pk, courseName, courseCode}
+Groups: {groupsId pk, courseId, groupName, groupSize, groupCapacity, senderId}
+GroupMessages: {senderId pk, body, date, time, groupsId}
+Countdown: {countdownId, time, title}
+
+Teaches: {tutorId pk, courseId pk, available}
+Takes: {studentId pk, courseId pk}
+Pertains: {studentId pk, groupsId pk}
